@@ -7,6 +7,10 @@ all he/she needs to know. The comments should usually include at least:
 PROJECT TITLE:
 PURPOSE OF PROJECT:
 VERSION or DATE:
-HOW TO START THIS PROJECT:
+
+HOW TO START THIS PROJECT:  Please note that, though discouraged by the 
+Lesson outline, you may use the charAt() and toLowerCase() methods to 
+complete this lab assignment!!!
+
 AUTHORS:
 USER INSTRUCTIONS:
