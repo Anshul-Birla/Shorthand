@@ -1,4 +1,5 @@
-
+import apcslib.*;
+import chn.util.*;
 /**
  * Write a description of class ShortClient here.
  *
@@ -9,6 +10,11 @@ public class ShortClient
 {
     public static void main(String args[])
     {
+        ConsoleIO keyboard = new ConsoleIO();
+        String input;
+        
+        System.out.print("Enter your string:");
+        input  = keyboard.readLine();
         
     }
 }

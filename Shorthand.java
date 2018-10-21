@@ -7,5 +7,13 @@
  */
 class Shorthand
 {
+    private String input, shorthand, temp;
+    
+    public Shorthand(String str)
+    {
+        input = str;
+       
+    }
+    
     
 }
