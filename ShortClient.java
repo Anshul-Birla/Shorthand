@@ -16,5 +16,7 @@ public class ShortClient
         System.out.print("Enter your string:");
         input  = keyboard.readLine();
         
+        Shorthand script = new Shorthand(input);
+        
     }
 }

@@ -7,36 +7,39 @@
  */
 class Shorthand
 {
-    private String input, shorthand, temp, temp2;
+    private String input, shorthand, temp;
     
     public Shorthand(String str)
     {
         input = str;
+        shorthand = "";
         replacement();
     }
     
     private void replacement()
     {
-        int strngLength = input.length();;
+        int strngLength = input.length();
+        String temp2 = "", lowertemp = "";
         for (int x = 0; x<strngLength; x++)
         {
             temp = input.substring(x, x+1);
             temp2 = temp2 + temp;
+            lowertemp = temp2.toLowerCase();
             if (temp.equals(" "))
             {
-                if (temp2.equals("and "))
+                if (lowertemp.equals("and "))
                 {
                     temp2 = "& ";
                 }
-                if (temp2.equals("to "))
+                if (lowertemp.equals("to "))
                 {
                     temp2 = "2 ";
                 }
-                if (temp2.equals("you "))
+                if (lowertemp.equals("you "))
                 {
                     temp2 = "U ";
                 }
-                if (temp2.equals("for "))
+                if (lowertemp.equals("for "))
                 {
                     temp2 = "4 ";
                 }
