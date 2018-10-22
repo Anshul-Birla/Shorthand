@@ -7,19 +7,21 @@
  */
 class Shorthand
 {
-    private String input, shorthand, temp;
+    private String input, shorthand, finalShort;
     
     public Shorthand(String str)
     {
         input = str;
         shorthand = "";
+        finalShort = "";
         replacement();
+        noVovels();
     }
     
     private void replacement()
     {
         int strngLength = input.length();
-        String temp2 = "", lowertemp = "";
+        String temp2 = "", lowertemp = "", temp;
         for (int x = 0; x<strngLength; x++)
         {
             temp = input.substring(x, x+1);
@@ -45,10 +47,33 @@ class Shorthand
                 }
                 shorthand = shorthand + temp2;
                 temp2 = "";
-            }
-        
-        
-        
+            } 
+            else  
+                if(x==strngLength-1)
+                {
+                    shorthand += temp2;
+                }
+        }
+    } 
+    
+    private void noVovels()
+    {
+        int strngLength = shorthand.length();
+        String temp, temp2;
+        for (int x = 0; x<strngLength; x++)
+        {
+            temp = shorthand.substring(x, x+1);
+            temp2 = temp;
+            if (!(temp2.equals("U ")))
+                temp2 = temp.toLowerCase();
+            if(temp2.equals("a")||temp2.equals("e")||
+                temp2.equals("i")||temp2.equals("o")||
+                temp2.equals("u"))
+                {
+                    temp ="";
+                }
+            finalShort +=temp;
+            
+        }
     }
-}   
 }
