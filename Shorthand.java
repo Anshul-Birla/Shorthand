@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Shorthand here.
+ * Ncessary Methods to make shorthand
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Anshul
+ * @v1
  */
 class Shorthand
 {
