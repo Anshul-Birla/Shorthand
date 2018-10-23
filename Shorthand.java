@@ -21,41 +21,47 @@ class Shorthand
     private void replacement()
     {
         int strngLength = input.length();
-        String temp2 = "", lowertemp = "", temp;
+        String temp2 = "";
+        String temp3 = "";
+        String lowertemp = "";
+        String temp;
         for (int x = 0; x<strngLength; x++)
         {
             temp = input.substring(x, x+1);
-            temp2 = temp2 + temp;
-            lowertemp = temp2.toLowerCase();
-            if (temp.equals(" "))
+            lowertemp = temp.toLowerCase();
+            
+            if ((lowertemp.compareTo("0") >= 0 && lowertemp.compareTo("9") <= 0) || 
+                (lowertemp.compareTo("a") >= 0 && lowertemp.compareTo("z") <= 0))
             {
-                if (lowertemp.equals("and "))
+               temp2+=lowertemp;
+               temp3+=temp;
+            }
+            else
+            {
+                if(temp2.equals("and"))
                 {
-                    temp2 = "& ";
+                    temp3 = "& ";
                 }
-                if (lowertemp.equals("to "))
+                if(temp2.equals("for"))
                 {
-                    temp2 = "2 ";
+                    temp3 = "4 ";
                 }
-                if (lowertemp.equals("you "))
+                if(temp2.equals("you"))
                 {
-                    temp2 = "U ";
+                    temp3 = "U ";
                 }
-                if (lowertemp.equals("for "))
+                if (temp2.equals("to"))
                 {
-                    temp2 = "4 ";
+                    temp3 = "to ";
                 }
-                shorthand = shorthand + temp2;
+                shorthand+=temp3;
+                temp3 = "";
                 temp2 = "";
-            } 
-            else  
-                if(x==strngLength-1)
-                {
-                    shorthand += temp2;
-                }
-        }
-    } 
-    
+            }
+            
+   
+        } 
+    }
     private void noVovels()
     {
         int strngLength = shorthand.length();
@@ -64,7 +70,7 @@ class Shorthand
         {
             temp = shorthand.substring(x, x+1);
             temp2 = temp;
-            if (!(temp2.equals("U ")))
+            if (!(temp2.equals("U"))||(temp2.equals("I ")))
                 temp2 = temp.toLowerCase();
             if(temp2.equals("a")||temp2.equals("e")||
                 temp2.equals("i")||temp2.equals("o")||
