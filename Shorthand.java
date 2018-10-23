@@ -11,7 +11,7 @@ class Shorthand
     
     public Shorthand(String str)
     {
-        input = str;
+        input = str+" ";
         shorthand = "";
         finalShort = "";
         replacement();
@@ -36,6 +36,7 @@ class Shorthand
                temp2+=lowertemp;
                temp3+=temp;
             }
+            
             else
             {
                 if(temp2.equals("and"))
@@ -52,7 +53,7 @@ class Shorthand
                 }
                 if (temp2.equals("to"))
                 {
-                    temp3 = "to ";
+                    temp3 = "2 ";
                 }
                 else
                 {
