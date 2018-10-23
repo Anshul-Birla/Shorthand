@@ -14,8 +14,7 @@ class Shorthand
         input = str+" ";
         shorthand = "";
         finalShort = "";
-        replacement();
-        noVovels();
+        
     }
     
     private void replacement()
@@ -66,7 +65,7 @@ class Shorthand
             
    
         } 
-        noVovels();
+        
     }
     private void noVovels()
     {
@@ -87,5 +86,11 @@ class Shorthand
             finalShort +=temp;
             
         }
+    }
+    public String run()
+    {
+        replacement();
+        noVovels();
+        return finalShort;
     }
 }

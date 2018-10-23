@@ -18,5 +18,7 @@ public class ShortClient
         
         Shorthand script = new Shorthand(input);
         
+        System.out.println("Shorthand: "+script.run());
+        
     }
 }
