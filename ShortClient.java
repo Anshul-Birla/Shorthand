@@ -12,13 +12,22 @@ public class ShortClient
     {
         ConsoleIO keyboard = new ConsoleIO();
         String input;
-        
+        do{
         System.out.print("Enter your string:");
         input  = keyboard.readLine();
         
         Shorthand script = new Shorthand(input);
+        if(input.equals("Q"))
+        {
+            System.out.println("You have ended the program");
+        }
+        else
+        {
+            System.out.println("Shorthand:"+script.run());
+        }
         
-        System.out.println("Shorthand: "+script.run());
+        
+    }while(!(input.equals("Q")));
         
     }
 }

@@ -40,15 +40,15 @@ class Shorthand
             {
                 if(temp2.equals("and"))
                 {
-                    temp3 = "& ";
+                    temp3 = "&";
                 }
                 if(temp2.equals("for"))
                 {
-                    temp3 = "4 ";
+                    temp3 = "4";
                 }
                 if(temp2.equals("you"))
                 {
-                    temp3 = "U ";
+                    temp3 = "U";
                 }
                 if (temp2.equals("to"))
                 {
