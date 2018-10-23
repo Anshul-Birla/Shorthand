@@ -30,7 +30,7 @@ class Shorthand
             temp = input.substring(x, x+1);
             lowertemp = temp.toLowerCase();
             
-            if ((lowertemp.compareTo("0") >= 0 && lowertemp.compareTo("9") <= 0) || 
+            if ((lowertemp.compareTo("!") >= 0 && lowertemp.compareTo("?") <= 0) || 
                 (lowertemp.compareTo("a") >= 0 && lowertemp.compareTo("z") <= 0))
             {
                temp2+=lowertemp;
@@ -54,6 +54,10 @@ class Shorthand
                 {
                     temp3 = "to ";
                 }
+                else
+                {
+                    temp3+=" ";
+                }
                 shorthand+=temp3;
                 temp3 = "";
                 temp2 = "";
@@ -61,6 +65,7 @@ class Shorthand
             
    
         } 
+        noVovels();
     }
     private void noVovels()
     {
