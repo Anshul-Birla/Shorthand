@@ -9,6 +9,10 @@ class Shorthand
 {
     private String input, shorthand, finalShort;
     
+    /**
+     * Constructor for Shorthand class to intialize all objects
+     * @param str                 string you want converted
+     */
     public Shorthand(String str)
     {
         input = str+" ";
@@ -17,6 +21,7 @@ class Shorthand
         
     }
     
+    //replaces and for to you with their respective shorthand equivalent
     private void replacement()
     {
         int strngLength = input.length();
@@ -67,6 +72,8 @@ class Shorthand
         } 
         
     }
+    
+    //deltes all vovels in the string
     private void noVovels()
     {
         int strngLength = shorthand.length();
@@ -87,6 +94,12 @@ class Shorthand
             
         }
     }
+    
+    /**
+     * Runs all neceassry methods for the conversion to take place
+     * @ param        none
+     * @ return       String that is shorthand for input
+     */
     public String run()
     {
         replacement();
